@@ -1,0 +1,5 @@
+//mudar o nome do algoritmo
+g++ insertionSort.cpp -o insertionSort
+
+//mudar o nome da instancia
+./insertionSort ./instancias-num/num.1000.1.in 
