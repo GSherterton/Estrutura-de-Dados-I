@@ -2,12 +2,32 @@
 #include <vector>
 #include <time.h>
 #include <string>
+#include <fstream>
 
 using namespace std;
 
 struct Instance{
     string name;
     vector<int> vec;
+    void read(){
+        ifstream fp;
+
+        fp.open(name);
+
+        if(!fp.is_open()){
+            cout << "Nao foi possivel abrir o arquivo\n";
+            return;
+        }
+
+        int tamanho;
+        fp >> tamanho;
+
+        int aux;
+        for(int i = 0; i < tamanho; i++){
+            fp >> aux;
+            vec.push_back(aux);
+        }
+    }
 };
 
 void insertionSort(vector<int> vec){
@@ -17,8 +37,15 @@ void insertionSort(vector<int> vec){
 }
 
 int main(int argc, char** argv){
+    if(argc < 2){
+        cout << "Missing instance name\n";
+
+        exit(1);
+    }
+
     Instance instance;
     instance.name = argv[1];
+    instance.read();
 
     //contagem de tempo
     clock_t start, end;
