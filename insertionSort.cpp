@@ -28,11 +28,29 @@ struct Instance{
             vec.push_back(aux);
         }
     }
+
+    void print(){
+        for(int i = 0; i < vec.size(); i++){
+            cout << vec[i] << " ";
+        }cout << "\n";
+    }
 };
 
-void insertionSort(vector<int> vec){
-    for(int i = 0; i < 10000000; i++){
+void insertionSort(vector<int>& vec){
+    int tamanho = vec.size();
 
+    int aux, i, j;
+    for(i = 1; i < tamanho; i++){ //itera sobre o vetor
+        aux = vec[i];
+        for(j = i-1; j >= 0; j--){ //ordena o vetor antes do elemento da iteração
+            if(vec[j] > aux){
+                vec[j+1] = vec[j];
+            }else{
+                break;
+            }
+        }
+
+        vec[j+1] = aux;
     }
 }
 
@@ -51,11 +69,17 @@ int main(int argc, char** argv){
     clock_t start, end;
     double tempo = 0;
 
+    //debug
+    //instance.print();
+
     start = clock(); //inicia o contador de tempo
 
     insertionSort(instance.vec);
 
     end = clock(); //pega o tempo final
+
+    //debug
+    //instance.print();
 
     tempo = (double)(end - start) / (double)(CLOCKS_PER_SEC); //realiza o cálculo do tempo gasto pela ordenação
 
