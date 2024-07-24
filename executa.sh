@@ -4,10 +4,10 @@
 input_dir="./instancias-num"
 
 # Programa que será executado
-programa="./insertionSort"
+programa="./selectionSort"
 
 # Nome do arquivo de saída
-output_file="benchmarkInsertionSort.txt"
+output_file="benchmarkSelectionSort.txt"
 
 # Limpa o arquivo de saída se já existir
 > "$output_file"
