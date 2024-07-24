@@ -1,0 +1,12 @@
+./instancias-num/num.100000.1.in: 5.48572
+./instancias-num/num.100000.2.in: 5.5332
+./instancias-num/num.100000.3.in: 5.54127
+./instancias-num/num.100000.4.in: 5.46934
+./instancias-num/num.10000.1.in: 0.090365
+./instancias-num/num.10000.2.in: 0.128625
+./instancias-num/num.10000.3.in: 0.148469
+./instancias-num/num.10000.4.in: 0.167833
+./instancias-num/num.1000.1.in: 0.001383
+./instancias-num/num.1000.2.in: 0.001692
+./instancias-num/num.1000.3.in: 0.002775
+./instancias-num/num.1000.4.in: 0.002904
