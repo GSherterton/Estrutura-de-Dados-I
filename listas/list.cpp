@@ -6,34 +6,38 @@ using namespace std;
 
 int main(){
     myList lista;
+    int pos;
 
     lista.exibe();
-    cout << lista.vazio() << endl;
+    cout << (lista.vazio() ? "Lista vazia" : "Lista nao vazia") << endl;
 
-    cout << lista.getPos(2) << endl;
-    lista.inserir(3, 1);
+    pos = lista.getPos(2);
+    cout << ((pos == -1) ? "Elemento nao encontrado" : "Elemento encontrado na posicao " + pos) << endl;
+    cout << (lista.inserir(3, 1) ? "Insercao feita com sucesso" : "Nao foi possivel inserir") << endl;
     lista.exibe();
 
-    lista.inserir(1, 1);
+    cout << (lista.inserir(1, 1) ? "Insercao feita com sucesso" : "Nao foi possivel inserir") << endl;
     lista.exibe();
 
-    lista.inserir(2, 3);
+    cout << (lista.inserir(2, 3) ? "Insercao feita com sucesso" : "Nao foi possivel inserir") << endl;
     lista.exibe();
 
-    lista.inserir(1, 6);
+    cout << (lista.inserir(1, 6) ? "Insercao feita com sucesso" : "Nao foi possivel inserir") << endl;
     lista.exibe();
 
-    lista.retirar(3);
+    cout << ((lista.retirar(3) == -1) ? "Nao foi possivel retirar" : "Retirada feita com sucesso") << endl;
     lista.exibe();
 
-    lista.setElem(2, 9);
+    cout << ((lista.setElem(2, 9) == -1) ? "Nao foi possivel mudar o elemento" : "Mudanca feita com sucesso") << endl;
     lista.exibe();
 
-    lista.inserir(lista.tamanho()+1, 8);
-    lista.inserir(lista.tamanho()+1, 14);
-    lista.inserir(lista.tamanho()+1, 2);
+    cout << (lista.inserir(lista.tamanho()+1, 8) ? "Insercao feita com sucesso" : "Nao foi possivel inserir") << endl;
+    cout << (lista.inserir(lista.tamanho()+1, 14) ? "Insercao feita com sucesso" : "Nao foi possivel inserir") << endl;
+    cout << (lista.inserir(lista.tamanho()+1, 2) ? "Insercao feita com sucesso" : "Nao foi possivel inserir") << endl;
     lista.exibe();
-
-
+    pos = lista.getPos(2);
+    cout << ((pos == -1) ? "Elemento 2 nao encontrado" : "Elemento 2 encontrado na posicao " + to_string(pos)) << endl;
+    cout << "Elemento da posicao 4: " << lista.getElem(4) << endl;
+    
     return 0;
 }
