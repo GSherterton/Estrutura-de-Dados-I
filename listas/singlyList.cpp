@@ -1,10 +1,10 @@
 #include <iostream>
-#include "myVector.h"
+#include "mySinglyList.h"
 
 using namespace std;
 
 int main(){
-    myVector lista;
+    mySinglyList lista;
     int pos;
 
     lista.exibe();
@@ -38,7 +38,6 @@ int main(){
     pos = lista.getPos(2);
     cout << ((pos == -1) ? "Elemento 2 nao encontrado" : "Elemento 2 encontrado na posicao " + to_string(pos)) << endl;
     cout << "Elemento da posicao 4: " << lista.getElem(4) << endl;
-
-
+    
     return 0;
 }
