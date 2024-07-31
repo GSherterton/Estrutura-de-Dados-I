@@ -17,9 +17,10 @@ class myVector{
         void exibe();                   //exibe todos os elementos da lista
 
     private:
-        int vec[10];                    //array com os elementos
+        int *vec;                       //ponteiro para um array dinamico com os elementos
         int tamanhoAtual;               //tamanho atual da lista
-        int tamanhoMax;                     //tamanho atual do array
+        int tamanhoMax;                 //tamanho atual do array
 
         bool cheio();                   //retorna se o array esta cheio
+        bool aumentarVetor();           //dobra o tamanho do vetor
 };

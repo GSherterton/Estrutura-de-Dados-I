@@ -39,6 +39,17 @@ int main(){
     cout << ((pos == -1) ? "Elemento 2 nao encontrado" : "Elemento 2 encontrado na posicao " + to_string(pos)) << endl;
     cout << "Elemento da posicao 4: " << lista.getElem(4) << endl;
 
+    cout << (lista.inserir(lista.tamanho()+1, 3) ? "Insercao feita com sucesso" : "Nao foi possivel inserir") << endl;
+    cout << (lista.inserir(lista.tamanho()+1, 1) ? "Insercao feita com sucesso" : "Nao foi possivel inserir") << endl;
+    cout << (lista.inserir(lista.tamanho()+1, 7) ? "Insercao feita com sucesso" : "Nao foi possivel inserir") << endl;
+    cout << (lista.inserir(lista.tamanho()+1, 5) ? "Insercao feita com sucesso" : "Nao foi possivel inserir") << endl;
+    cout << (lista.inserir(lista.tamanho()+1, 10) ? "Insercao feita com sucesso" : "Nao foi possivel inserir") << endl;
+    cout << (lista.inserir(lista.tamanho()+1, 4) ? "Insercao feita com sucesso" : "Nao foi possivel inserir") << endl;
+    lista.exibe();
+    cout << (lista.inserir(lista.tamanho()+1, 2) ? "Insercao feita com sucesso" : "Nao foi possivel inserir") << endl;
+    //cout << (lista.inserir(lista.tamanho()+1, 8) ? "Insercao feita com sucesso" : "Nao foi possivel inserir") << endl;
+    lista.exibe();
+
 
     return 0;
 }

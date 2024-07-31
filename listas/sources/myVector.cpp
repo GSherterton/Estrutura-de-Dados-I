@@ -3,7 +3,8 @@
 
 myVector::myVector(){
     tamanhoAtual = 0;
-    tamanhoMax = 10;
+    tamanhoMax = 1;
+    vec = new int[1];
 }
 
 bool myVector::vazio(){
@@ -46,9 +47,29 @@ bool myVector::setElem(int pos, int val){
     return true;
 }
 
+bool myVector::aumentarVetor(){
+    int *deletado = vec;
+
+    vec = new int[2*tamanhoMax];
+
+    for(int i = 0; i < tamanhoMax; i++){
+        vec[i] = deletado[i];
+    }
+
+    tamanhoMax *= 2;
+
+    delete deletado;
+
+    return true;
+}
+
 bool myVector::inserir(int pos, int val){
-    if(cheio() || (pos > tamanhoAtual+1) || (pos <= 0)){  //checa se a posicao é valida
+    if((pos > tamanhoAtual+1) || (pos <= 0)){  //checa se a posicao é valida
         return false;
+    }
+
+    if(cheio()){ //se o vetor estiver cheio dobra ele de tamanho
+        aumentarVetor();
     }
 
     for(int i = tamanhoAtual; i >= pos; i--){
