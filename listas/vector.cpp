@@ -47,7 +47,6 @@ int main(){
     cout << (lista.inserir(lista.tamanho()+1, 4) ? "Insercao feita com sucesso" : "Nao foi possivel inserir") << endl;
     lista.exibe();
     cout << (lista.inserir(lista.tamanho()+1, 2) ? "Insercao feita com sucesso" : "Nao foi possivel inserir") << endl;
-    //cout << (lista.inserir(lista.tamanho()+1, 8) ? "Insercao feita com sucesso" : "Nao foi possivel inserir") << endl;
     lista.exibe();
 
 
