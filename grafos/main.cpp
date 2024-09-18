@@ -115,6 +115,11 @@ vector<int> find_path(const vector<int>& parent, const int& start, int end){
 void print_route(const vector<int>& route){
     int n = route.size();
 
+    if(n == 0){
+        cout << "A rota está vazia!\n";
+        return;
+    }
+
     cout << "Rota: ";
     for(int i = 0; i < n; i++){
         cout << route[i] << (i == n-1 ? "\n" : " -> ");
