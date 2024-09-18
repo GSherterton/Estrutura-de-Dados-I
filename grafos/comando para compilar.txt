@@ -1,0 +1,5 @@
+//para compilar
+g++ main.cpp -o teste
+
+//para executar
+./teste ./instances/pcv4.txt
